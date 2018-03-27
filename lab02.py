@@ -58,8 +58,8 @@ def plot(R):
     fig.savefig('lab'+labNum+'_'+R['num']+'.jpg')
     fig.show()
 
-    R = list(calcR(R['V'], R['i'])) #Ohm
-    print("R: {}".format(np.mean(R)))
-    print("Sigma R: {}".format(float(np.std(R))))
+    r = list(calcR(R['V'], R['i'])) #Ohm
+    print("{}: {}".format(R['num'], np.mean(r)))
+    print("Sigma {}: {}".format(R['num'], float(np.std(r))))
 
 if __name__ == '__main__': main()
